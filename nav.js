@@ -26,3 +26,19 @@
   bar.insertBefore(mk(-1, "Indietro", "M15 18l-6-6 6-6"), bar.firstChild);
   bar.appendChild(mk(1, "Avanti", "M9 6l6 6-6 6"));
 })();
+
+/* Menu hamburger della home: su telefono apre/chiude il menu, su schermo grande resta aperto. */
+(function () {
+  var burger = document.querySelector(".hero-burger");
+  var menu = document.querySelector(".hero-menu");
+  if (!burger || !menu) return;
+  function setOpen(open) {
+    menu.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+  }
+  burger.addEventListener("click", function () {
+    setOpen(!menu.classList.contains("open"));
+  });
+  if (location.hash === "#menu") setOpen(true);
+})();

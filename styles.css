@@ -184,3 +184,21 @@ h2.sec-title{font-size:1.45rem;margin-bottom:4px}
 .hero-menu a:active{background:rgba(255,255,255,.38)}
 
 .hero-v2::before,.hero-v2::after{display:none}
+
+/* ---------- menu hamburger: mobile chiuso, desktop aperto (richiesta di Gino, 17 ott 2026) ---------- */
+.hero-v2 .hero-burger{
+  position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;border-radius:999px;
+  background:rgba(255,255,255,.22);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.4);cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:5px;padding:0;
+}
+.hero-v2 .hero-burger span{display:block;width:20px;height:2.6px;border-radius:2px;background:#fff}
+.hero-v2 .hero-menu{display:none}
+.hero-v2 .hero-menu.open{display:flex}
+@media (min-width:900px){
+  .hero-v2 .hero-burger{display:none}
+  .hero-v2 .hero-menu{display:flex}
+}
+@media (min-width:900px){
+  .hero-v2 .hero-photo{height:340px;object-position:center 28%}
+}
