@@ -156,3 +156,12 @@ h2.sec-title{font-size:1.45rem;margin-bottom:4px}
 .audiocard h3{font-size:1.1rem;margin-bottom:4px}
 .audiocard p{opacity:.9;font-size:.88rem;margin-bottom:10px}
 .audiocard audio{width:100%;border-radius:12px}
+
+/* ---------- frecce indietro/avanti (stesso sistema di forzaquotidiana, stile New Generation) ---------- */
+.tabbar .ng-navarrow{
+  flex:0 0 auto;align-self:center;width:38px;height:38px;border-radius:999px;
+  border:1px solid rgba(124,58,237,.25);background:#F3E8FF;color:var(--violet);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;font-family:inherit;
+}
+.tabbar .ng-navarrow:active{background:#E5D4FF}
+.tabbar .ng-navarrow svg{width:20px;height:20px}
