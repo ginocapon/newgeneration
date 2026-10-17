@@ -165,3 +165,22 @@ h2.sec-title{font-size:1.45rem;margin-bottom:4px}
 }
 .tabbar .ng-navarrow:active{background:#E5D4FF}
 .tabbar .ng-navarrow svg{width:20px;height:20px}
+
+/* ---------- hero v2: foto sfumata nel gradiente + menu sezioni (richiesta di Gino, 17 ott 2026) ---------- */
+.hero-v2{padding:0 0 28px;text-align:center}
+.hero-v2 .hero-photo{
+  width:100%;height:250px;object-fit:cover;object-position:center 12%;
+  border:0;border-radius:0;box-shadow:none;margin:0;
+  -webkit-mask-image:linear-gradient(to bottom,#000 45%,transparent 98%);
+  mask-image:linear-gradient(to bottom,#000 45%,transparent 98%);
+}
+.hero-v2 .hero-content{position:relative;z-index:2;margin-top:-64px;padding:0 18px}
+.hero-menu{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.hero-menu a{
+  background:rgba(255,255,255,.22);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  color:#fff;font-weight:800;font-size:.85rem;padding:8px 16px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.4);text-decoration:none;
+}
+.hero-menu a:active{background:rgba(255,255,255,.38)}
+
+.hero-v2::before,.hero-v2::after{display:none}
